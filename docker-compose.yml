@@ -42,7 +42,7 @@ services:
     image: boxfuse/flyway
     command: -url=jdbc:postgresql://petstore-db:5432/petstore -user=db-user -password=db-password migrate
     volumes:
-      - ./db/migration:/flyway/sql
+      - ./db/migrations:/flyway/sql
     depends_on:
       - petstore-db
     networks:
